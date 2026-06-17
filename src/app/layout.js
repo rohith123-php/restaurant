@@ -2,7 +2,7 @@ import './globals.css';
 import { CartProvider } from '../context/CartContext';
 
 export const metadata = {
-  title: 'Arasu Chicken Center & Restaurant',
+  title: 'Jarvis Restaurant',
   description: 'Premium quality food and delivery.',
 };
 

@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h1 style={{ fontSize: '3rem', color: 'var(--primary)' }}>Arasu Chicken Center</h1>
+        <h1 style={{ fontSize: '3rem', color: 'var(--primary)' }}>Jarvis Restaurant</h1>
         <p>Premium Quality Food. Order Online Now!</p>
         <button className="btn-primary" style={{ marginTop: '20px' }}>View Menu</button>
       </div>
