@@ -1,4 +1,9 @@
+"use client";
+import { useCart } from '../context/CartContext';
+
 export default function Home() {
+  const { addToCart } = useCart();
+
   return (
     <div style={{ padding: 0 }}>
       {/* Hero Section */}
@@ -54,7 +59,13 @@ export default function Home() {
             <p style={{ color: 'var(--text-muted)', marginBottom: '20px' }}>Authentic Dum Biryani cooked with fragrant basmati rice and secret spices.</p>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--primary)' }}>$14.99</span>
-              <button className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>Add to Cart</button>
+              <button 
+                onClick={() => addToCart({ id: '1', name: 'Royal Chicken Biryani', price: 14.99, image: '/chicken_biryani.png' })} 
+                className="btn-primary" 
+                style={{ padding: '10px 20px', fontSize: '0.9rem' }}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
 
@@ -66,7 +77,13 @@ export default function Home() {
             <p style={{ color: 'var(--text-muted)', marginBottom: '20px' }}>Rich, creamy tomato gravy with tender chicken chunks. A classic favorite.</p>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--primary)' }}>$16.99</span>
-              <button className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>Add to Cart</button>
+              <button 
+                onClick={() => addToCart({ id: '2', name: 'Butter Chicken Curry', price: 16.99, image: '/chicken_curry.png' })} 
+                className="btn-primary" 
+                style={{ padding: '10px 20px', fontSize: '0.9rem' }}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
 
@@ -78,7 +95,13 @@ export default function Home() {
             <p style={{ color: 'var(--text-muted)', marginBottom: '20px' }}>Golden, extra crispy perfection on the outside, juicy on the inside.</p>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--primary)' }}>$12.99</span>
-              <button className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>Add to Cart</button>
+              <button 
+                onClick={() => addToCart({ id: '3', name: 'Crispy Fried Chicken', price: 12.99, image: '/fried_chicken.png' })} 
+                className="btn-primary" 
+                style={{ padding: '10px 20px', fontSize: '0.9rem' }}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
 

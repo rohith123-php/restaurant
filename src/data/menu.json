@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Royal Chicken Biryani",
+    "description": "Authentic Dum Biryani cooked with fragrant basmati rice and secret spices.",
+    "price": 14.99,
+    "image": "/chicken_biryani.png"
+  },
+  {
+    "id": "2",
+    "name": "Butter Chicken Curry",
+    "description": "Rich, creamy tomato gravy with tender chicken chunks. A classic favorite.",
+    "price": 16.99,
+    "image": "/chicken_curry.png"
+  },
+  {
+    "id": "3",
+    "name": "Crispy Fried Chicken",
+    "description": "Golden, extra crispy perfection on the outside, juicy on the inside.",
+    "price": 12.99,
+    "image": "/fried_chicken.png"
+  },
+  {
+    "id": "1781686715133",
+    "name": "dosa",
+    "description": "its an delicious dish",
+    "price": 120,
+    "image": "/dosa.png"
+  },
+  {
+    "id": "1781687057960",
+    "name": "idli",
+    "description": "soft dish",
+    "price": 10,
+    "image": "/idli.png"
+  },
+  {
+    "id": "1781687436027",
+    "name": "panner tikka",
+    "description": "an delicious dish",
+    "price": 160,
+    "image": "/paneer_tikka.png"
+  },
+  {
+    "id": "1781687579073",
+    "name": "Rich Mutton Rogan Josh curry",
+    "description": "terrifier",
+    "price": 189,
+    "image": "/mutton_rogan_josh.png"
+  },
+  {
+    "id": "1781687677397",
+    "name": "veg thali",
+    "description": "A grand Indian Veg Meals/Thal",
+    "price": 300,
+    "image": "/veg_thali.png"
+  }
+]

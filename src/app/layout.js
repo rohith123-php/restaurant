@@ -1,5 +1,7 @@
 import './globals.css';
 import { CartProvider } from '../context/CartContext';
+import CartButton from '../components/CartButton';
+import CartSidebar from '../components/CartSidebar';
 
 export const metadata = {
   title: 'Jarvis Restaurant',
@@ -15,8 +17,9 @@ export default function RootLayout({ children }) {
             <a href="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Home</a>
             <a href="/menu" style={{ color: 'white', textDecoration: 'none' }}>Menu</a>
             <a href="/admin" style={{ color: 'white', textDecoration: 'none' }}>Admin Panel</a>
-            <a href="/cart" style={{ color: 'var(--primary)', textDecoration: 'none', marginLeft: 'auto', fontWeight: 'bold' }}>🛒 Cart</a>
+            <CartButton />
           </nav>
+          <CartSidebar />
           <main style={{ padding: '40px' }}>
             {children}
           </main>
