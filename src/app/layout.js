@@ -4,8 +4,8 @@ import CartButton from '../components/CartButton';
 import CartSidebar from '../components/CartSidebar';
 
 export const metadata = {
-  title: 'Jarvis Restaurant',
-  description: 'Premium quality food and delivery.',
+  title: 'Jarvis Restaurant | Exquisite Dining',
+  description: 'Premium culinary experiences delivered directly to your doorstep.',
 };
 
 export default function RootLayout({ children }) {
@@ -13,14 +13,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <CartProvider>
-          <nav style={{ padding: '20px', background: 'var(--dark)', color: 'white', display: 'flex', gap: '20px', alignItems: 'center' }}>
-            <a href="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Home</a>
-            <a href="/menu" style={{ color: 'white', textDecoration: 'none' }}>Menu</a>
-            <a href="/admin" style={{ color: 'white', textDecoration: 'none' }}>Admin Panel</a>
+          <header className="navbar">
+            <a href="/" className="navbar-logo">Jarvis Restaurant</a>
+            <nav className="navbar-links">
+              <a href="/" className="navbar-link">Home</a>
+              <a href="/menu" className="navbar-link">Menu</a>
+              <a href="/admin" className="navbar-link">Admin Dashboard</a>
+            </nav>
             <CartButton />
-          </nav>
+          </header>
           <CartSidebar />
-          <main style={{ padding: '40px' }}>
+          <main style={{ minHeight: '100vh', paddingTop: '80px' }}>
             {children}
           </main>
         </CartProvider>
