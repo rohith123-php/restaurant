@@ -76,9 +76,11 @@ export default function CartSidebar() {
               <span>Total</span>
               <span style={{ color: 'var(--primary)' }}>${(cartTotal * 1.05).toFixed(2)}</span>
             </div>
-            <button className="btn-primary pulse" style={{ width: '100%', padding: '15px', fontSize: '1.2rem' }}>
-              Proceed to Checkout
-            </button>
+            <a href="/checkout" onClick={toggleCart} style={{ textDecoration: 'none' }}>
+              <button className="btn-primary pulse" style={{ width: '100%', padding: '15px', fontSize: '1.2rem', cursor: 'pointer' }}>
+                Proceed to Checkout
+              </button>
+            </a>
           </div>
         )}
       </div>

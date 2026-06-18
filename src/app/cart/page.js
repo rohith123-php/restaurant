@@ -31,9 +31,11 @@ export default function CartPage() {
             <h2>${total}</h2>
           </div>
           
-          <button className="btn-primary" style={{ width: '100%', marginTop: '20px', padding: '15px', fontSize: '1.1rem' }}>
-            Proceed to Checkout
-          </button>
+          <a href="/checkout" style={{ textDecoration: 'none' }}>
+            <button className="btn-primary" style={{ width: '100%', marginTop: '20px', padding: '15px', fontSize: '1.1rem', cursor: 'pointer' }}>
+              Proceed to Checkout
+            </button>
+          </a>
         </div>
       )}
     </div>
