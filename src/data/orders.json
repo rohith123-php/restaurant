@@ -46,7 +46,27 @@
     "phone": "9876543210",
     "items": "",
     "total": 0,
-    "status": "Preparing",
+    "status": "Out for Delivery",
     "date": "6/23/2026, 12:41:14 PM"
+  },
+  {
+    "id": "OR-5548",
+    "customer": "akshaya",
+    "address": "VELACHERY, CHENNAI",
+    "phone": "07010892139",
+    "items": "",
+    "total": 0,
+    "status": "Preparing",
+    "date": "6/23/2026, 12:45:46 PM"
+  },
+  {
+    "id": "OR-6118",
+    "customer": "Kokila Majunathan",
+    "address": "VELACHERY, CHENNAI",
+    "phone": "07010892139",
+    "items": "",
+    "total": 0,
+    "status": "Preparing",
+    "date": "6/23/2026, 12:57:31 PM"
   }
 ]

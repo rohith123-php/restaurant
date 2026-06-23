@@ -54,5 +54,26 @@
     "description": "A grand Indian Veg Meals/Thal",
     "price": 300,
     "image": "/veg_thali.png"
+  },
+  {
+    "id": "drink_1",
+    "name": "Royal Mango Lassi",
+    "description": "Creamy sweet yogurt drink infused with premium Alphonso mangoes and green cardamom.",
+    "price": 120,
+    "image": "/mango_lassi.png"
+  },
+  {
+    "id": "drink_2",
+    "name": "Masala Cardamom Chai",
+    "description": "Slow-brewed rich black tea with fresh milk, organic ginger, and aromatic green cardamom.",
+    "price": 40,
+    "image": "/masala_chai.png"
+  },
+  {
+    "id": "drink_3",
+    "name": "Sparkling Mint Lime Soda",
+    "description": "A refreshing effervescent lime soda prepared with direct fresh mint mashing and black salt.",
+    "price": 80,
+    "image": "/lime_soda.png"
   }
 ]
