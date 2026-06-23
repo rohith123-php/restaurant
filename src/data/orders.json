@@ -18,5 +18,35 @@
     "total": 0,
     "status": "Delivered",
     "date": "6/18/2026, 3:35:28 PM"
+  },
+  {
+    "id": "OR-3901",
+    "customer": "M.ROHITH",
+    "address": "VELACHERY, CHENNAI",
+    "phone": "93782020739",
+    "items": "",
+    "total": 0,
+    "status": "Out for Delivery",
+    "date": "6/23/2026, 11:55:45 AM"
+  },
+  {
+    "id": "OR-6254",
+    "customer": "zubi",
+    "address": "VELACHERY, CHENNAI",
+    "phone": "07010892139",
+    "items": "",
+    "total": 0,
+    "status": "Pending",
+    "date": "6/23/2026, 12:15:35 PM"
+  },
+  {
+    "id": "OR-2727",
+    "customer": "Jane Smith",
+    "address": "456 Separated St, Viteville",
+    "phone": "9876543210",
+    "items": "",
+    "total": 0,
+    "status": "Preparing",
+    "date": "6/23/2026, 12:41:14 PM"
   }
 ]

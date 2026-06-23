@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
             <nav className="navbar-links">
               <a href="/" className="navbar-link">Home</a>
               <a href="/menu" className="navbar-link">Menu</a>
-              <a href="/admin" className="navbar-link">Admin Dashboard</a>
             </nav>
             <CartButton />
           </header>

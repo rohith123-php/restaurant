@@ -4,14 +4,24 @@ import path from 'path';
 
 const dataFilePath = path.join(process.cwd(), 'src', 'data', 'menu.json');
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': 'http://localhost:3001',
+  'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
 // GET all menu items
 export async function GET() {
   try {
     const fileData = fs.readFileSync(dataFilePath, 'utf8');
     const menuItems = JSON.parse(fileData);
-    return NextResponse.json(menuItems);
+    return NextResponse.json(menuItems, { headers: corsHeaders });
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to read database' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to read database' }, { status: 500, headers: corsHeaders });
   }
 }
 
@@ -37,9 +47,9 @@ export async function POST(request) {
     menuItems.push(newEntry);
     fs.writeFileSync(dataFilePath, JSON.stringify(menuItems, null, 2));
     
-    return NextResponse.json(newEntry, { status: 201 });
+    return NextResponse.json(newEntry, { status: 201, headers: corsHeaders });
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to save to database' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to save to database' }, { status: 500, headers: corsHeaders });
   }
 }
 
@@ -50,7 +60,7 @@ export async function DELETE(request) {
     const id = searchParams.get('id');
     
     if (!id) {
-      return NextResponse.json({ error: 'Item ID is required' }, { status: 400 });
+      return NextResponse.json({ error: 'Item ID is required' }, { status: 400, headers: corsHeaders });
     }
     
     // Read current data
@@ -63,8 +73,8 @@ export async function DELETE(request) {
     // Save new array
     fs.writeFileSync(dataFilePath, JSON.stringify(menuItems, null, 2));
     
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true }, { headers: corsHeaders });
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to delete from database' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to delete from database' }, { status: 500, headers: corsHeaders });
   }
 }
