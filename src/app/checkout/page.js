@@ -78,7 +78,7 @@ export default function CheckoutPage() {
               </div>
 
               <button type="submit" className="btn-primary" style={{ marginTop: '20px', width: '100%' }}>
-                Pay & Confirm Order (${totalWithTax})
+                Pay & Confirm Order (₹{totalWithTax})
               </button>
             </form>
           </div>
@@ -143,22 +143,22 @@ export default function CheckoutPage() {
                 {cartItems.map((item) => (
                   <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
                     <span>{item.name} (x{item.quantity})</span>
-                    <span>${(item.price * item.quantity).toFixed(2)}</span>
+                    <span>₹{(item.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
               </div>
               <div style={{ borderTop: '1px solid var(--glass-border)', paddingTop: '15px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.95rem' }}>
                   <span>Subtotal</span>
-                  <span>${cartTotal.toFixed(2)}</span>
+                  <span>₹{cartTotal.toFixed(2)}</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.95rem' }}>
                   <span>Tax (5%)</span>
-                  <span>${(cartTotal * 0.05).toFixed(2)}</span>
+                  <span>₹{(cartTotal * 0.05).toFixed(2)}</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent)', borderTop: '1px solid var(--glass-border)', paddingTop: '10px' }}>
                   <span>Total Amount</span>
-                  <span>${totalWithTax}</span>
+                  <span>₹{totalWithTax}</span>
                 </div>
               </div>
             </div>

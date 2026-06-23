@@ -96,7 +96,7 @@ export default function MenuPage() {
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>{item.name}</h3>
                 <p style={{ color: 'var(--text-muted)', marginBottom: '20px', height: '45px', overflow: 'hidden' }}>{item.description}</p>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} onClick={(e) => e.stopPropagation()}>
-                  <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--accent)' }}>${item.price.toFixed(2)}</span>
+                  <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--accent)' }}>₹{item.price.toFixed(2)}</span>
                   <button onClick={() => addToCart(item)} className="btn-primary" style={{ padding: '8px 18px', fontSize: '0.85rem' }}>
                     Add to Cart
                   </button>
@@ -127,7 +127,7 @@ export default function MenuPage() {
               <button onClick={() => setSelectedDish(null)} style={{ background: 'transparent', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer' }}>✕</button>
             </div>
             
-            <img src={selectedDish.image} alt={selectedDish.name} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '12px', marginBottom: '20px' }} />
+            <img src={selectedDish.image} alt={selectedDish.name} style={{ display: 'block', width: '100%', height: '180px', objectFit: 'cover', borderRadius: '12px', marginBottom: '20px' }} />
             
             <p style={{ color: 'var(--text-muted)', lineHeight: '1.6', fontSize: '1.1rem', marginBottom: '20px' }}>{selectedDish.description}</p>
 
@@ -152,7 +152,7 @@ export default function MenuPage() {
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontSize: '1.8rem', fontWeight: 'bold', color: 'var(--accent)' }}>${selectedDish.price.toFixed(2)}</span>
+              <span style={{ fontSize: '1.8rem', fontWeight: 'bold', color: 'var(--accent)' }}>₹{selectedDish.price.toFixed(2)}</span>
               <button 
                 onClick={() => {
                   addToCart({ ...selectedDish, name: `${selectedDish.name} (${spiceLevel})` });

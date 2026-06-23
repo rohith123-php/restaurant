@@ -17,10 +17,10 @@ export default function CartPage() {
             <div key={item.id} className="premium-card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
               <div>
                 <h3 style={{ margin: '0' }}>{item.name}</h3>
-                <p style={{ margin: '5px 0 0 0', color: 'gray' }}>Qty: {item.quantity} x ${item.price}</p>
+                <p style={{ margin: '5px 0 0 0', color: 'gray' }}>Qty: {item.quantity} x ₹{item.price}</p>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                <span style={{ fontWeight: 'bold' }}>${item.price * item.quantity}</span>
+                <span style={{ fontWeight: 'bold' }}>₹{item.price * item.quantity}</span>
                 <button onClick={() => removeFromCart(item.id)} style={{ background: '#ff4757', color: 'white', border: 'none', padding: '5px 10px', borderRadius: '4px', cursor: 'pointer' }}>Remove</button>
               </div>
             </div>
@@ -28,7 +28,7 @@ export default function CartPage() {
           
           <div style={{ marginTop: '30px', padding: '20px', background: 'var(--dark)', color: 'white', borderRadius: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h2>Total:</h2>
-            <h2>${total}</h2>
+            <h2>₹{total}</h2>
           </div>
           
           <a href="/checkout" style={{ textDecoration: 'none' }}>

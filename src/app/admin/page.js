@@ -69,7 +69,7 @@ export default function AdminDashboard() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '50px' }}>
         <div className="glass-card" style={{ borderLeft: '4px solid var(--accent)' }}>
           <h3 style={{ color: 'var(--text-muted)', margin: '0 0 10px 0' }}>Est. Revenue</h3>
-          <p style={{ fontSize: '2.2rem', fontWeight: 'bold', margin: 0, color: 'var(--accent)' }}>${calculatedRevenue}</p>
+          <p style={{ fontSize: '2.2rem', fontWeight: 'bold', margin: 0, color: 'var(--accent)' }}>₹{calculatedRevenue}</p>
         </div>
         <div className="glass-card" style={{ borderLeft: '4px solid var(--primary)' }}>
           <h3 style={{ color: 'var(--text-muted)', margin: '0 0 10px 0' }}>Total Orders</h3>
@@ -112,7 +112,7 @@ export default function AdminDashboard() {
                   </td>
                   <td style={{ padding: '15px 12px', color: 'var(--text-muted)' }}>{order.address}</td>
                   <td style={{ padding: '15px 12px', fontSize: '0.9rem' }}>{order.items}</td>
-                  <td style={{ padding: '15px 12px', color: 'var(--accent)', fontWeight: 'bold' }}>${order.total}</td>
+                  <td style={{ padding: '15px 12px', color: 'var(--accent)', fontWeight: 'bold' }}>₹{order.total}</td>
                   <td style={{ padding: '15px 12px' }}>
                     <select 
                       value={order.status}
@@ -142,7 +142,7 @@ export default function AdminDashboard() {
           <form onSubmit={handleAddItem} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
             <input type="text" name="name" placeholder="Dish Name" required value={formData.name} onChange={handleInputChange} style={formInputStyle} />
             <textarea name="description" placeholder="Short description..." required rows="3" value={formData.description} onChange={handleInputChange} style={formInputStyle} />
-            <input type="number" step="0.01" name="price" placeholder="Price (USD)" required value={formData.price} onChange={handleInputChange} style={formInputStyle} />
+            <input type="number" step="0.01" name="price" placeholder="Price (INR)" required value={formData.price} onChange={handleInputChange} style={formInputStyle} />
             <input type="text" name="image" placeholder="Image URL (e.g., /paneer_tikka.png)" value={formData.image} onChange={handleInputChange} style={formInputStyle} />
             <button type="submit" className="btn-primary" style={{ marginTop: '10px' }}>+ Publish to Menu</button>
           </form>
@@ -153,7 +153,7 @@ export default function AdminDashboard() {
               <div className="glass-card" style={{ padding: '20px' }}>
                 <h3>{formData.name}</h3>
                 <p style={{ color: 'var(--text-muted)' }}>{formData.description || 'Description will show here...'}</p>
-                <span style={{ fontWeight: 'bold', color: 'var(--accent)' }}>${parseFloat(formData.price || 0).toFixed(2)}</span>
+                <span style={{ fontWeight: 'bold', color: 'var(--accent)' }}>₹{parseFloat(formData.price || 0).toFixed(2)}</span>
               </div>
             </div>
           )}
@@ -181,7 +181,7 @@ export default function AdminDashboard() {
                       <img src={item.image} alt={item.name} style={{ width: '45px', height: '45px', borderRadius: '6px', objectFit: 'cover' }} />
                     </td>
                     <td style={{ padding: '10px', fontWeight: 'bold' }}>{item.name}</td>
-                    <td style={{ padding: '10px', color: 'var(--accent)' }}>${parseFloat(item.price).toFixed(2)}</td>
+                    <td style={{ padding: '10px', color: 'var(--accent)' }}>₹{parseFloat(item.price).toFixed(2)}</td>
                     <td style={{ padding: '10px' }}>
                       <button onClick={() => handleDeleteItem(item.id)} style={{ background: 'red', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '4px', cursor: 'pointer' }}>
                         Delete

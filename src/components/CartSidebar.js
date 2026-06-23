@@ -47,7 +47,7 @@ export default function CartSidebar() {
                 <div style={{ flex: 1 }}>
                   <h4 style={{ margin: '0 0 5px 0' }}>{item.name}</h4>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ color: 'var(--secondary)', fontWeight: 'bold' }}>${item.price.toFixed(2)}</span>
+                    <span style={{ color: 'var(--secondary)', fontWeight: 'bold' }}>₹{item.price.toFixed(2)}</span>
                     
                     {/* Quantity Controls */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', background: 'rgba(255,255,255,0.1)', padding: '5px 10px', borderRadius: '20px' }}>
@@ -66,15 +66,15 @@ export default function CartSidebar() {
           <div style={{ marginTop: '20px', paddingTop: '20px', borderTop: '2px solid var(--glass-border)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', color: 'var(--text-muted)' }}>
               <span>Subtotal</span>
-              <span>${cartTotal.toFixed(2)}</span>
+              <span>₹{cartTotal.toFixed(2)}</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', color: 'var(--text-muted)' }}>
               <span>Tax (5%)</span>
-              <span>${(cartTotal * 0.05).toFixed(2)}</span>
+              <span>₹{(cartTotal * 0.05).toFixed(2)}</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', fontSize: '1.5rem', fontWeight: 'bold' }}>
               <span>Total</span>
-              <span style={{ color: 'var(--primary)' }}>${(cartTotal * 1.05).toFixed(2)}</span>
+              <span style={{ color: 'var(--primary)' }}>₹{(cartTotal * 1.05).toFixed(2)}</span>
             </div>
             <a href="/checkout" onClick={toggleCart} style={{ textDecoration: 'none' }}>
               <button className="btn-primary pulse" style={{ width: '100%', padding: '15px', fontSize: '1.2rem', cursor: 'pointer' }}>
